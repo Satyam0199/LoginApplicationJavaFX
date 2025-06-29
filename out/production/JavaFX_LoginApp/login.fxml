@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.LoginController">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Login Page" style="-fx-font-size: 20px;"/>
+    <TextField fx:id="emailField" promptText="Enter Email"/>
+    <PasswordField fx:id="passwordField" promptText="Enter Password"/>
+    <TextField fx:id="visiblePasswordField" promptText="Enter Password" visible="false"/>
+
+    <HBox spacing="5">
+        <CheckBox fx:id="showPasswordCheck" text="Show Password"/>
+        <CheckBox fx:id="rememberCheck" text="Remember Password"/>
+    </HBox>
+
+    <Hyperlink fx:id="forgotLink" text="Forgot Password?"/>
+
+    <Button fx:id="loginBtn" text="Login" onAction="#handleLogin" disable="true"/>
+    <Label fx:id="errorLabel" textFill="red"/>
+    <Label fx:id="timeLabel"/>
+
+</VBox>
